@@ -10,7 +10,7 @@
           <a class="nav-link @if(Route::currentRouteName() == 'homepage') text-custom @endif" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="{{route('recipe.create')}}">Inserisci ricetta</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
