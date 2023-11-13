@@ -24,7 +24,7 @@
                         @enderror
                     </div>
                     <button type="submit" class="btn btn-custom">Accedi</button>
-                    <span>Non sei registrato? <a class="text-custom small" href="{{route('register')}}">Registrati</a></span>
+                    <span class="ms-3">Non sei registrato? <a class="text-custom small" href="{{route('register')}}">Registrati</a></span>
                 </form>
             </div>
         </div>

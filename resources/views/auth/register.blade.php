@@ -35,7 +35,7 @@
                         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                     </div>
                     <button type="submit" class="btn btn-custom">Registrati</button>
-                    <span>Sei già registrato? <a class="text-custom small" href="{{route('login')}}">Accedi</a></span>
+                    <span class="ms-3">Sei già registrato? <a class="text-custom small" href="{{route('login')}}">Accedi</a></span>
                 </form>
             </div>
         </div>
