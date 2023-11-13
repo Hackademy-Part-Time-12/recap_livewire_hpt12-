@@ -13,7 +13,7 @@
           <a class="nav-link" href="{{route('recipe.create')}}">Inserisci ricetta</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="{{route('recipe.index')}}">Ricette</a>
         </li>
         @auth
           <li class="nav-item dropdown">

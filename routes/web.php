@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create');
+Route::get('/recipe/index', [RecipeController::class, 'index'])->name('recipe.index');
+Route::get('/recipe/show/{recipe}', [RecipeController::class, 'show'])->name('recipe.show');
