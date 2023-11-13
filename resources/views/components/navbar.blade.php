@@ -15,16 +15,29 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+        @auth
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ciao {{ Auth::user()->name }}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profilo</a></li>
+              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
+                <form action="{{route('logout')}}" method="POST" id="form-logout">
+                  @csrf
+                </form>
+              </li>
+            </ul>
+          </li>
+        @endauth
+        @guest
+          <li class="nav-item">
+            <a class="nav-link @if(Route::currentRouteName() == 'login') text-custom @endif" href="{{route('login')}}">Accedi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @if(Route::currentRouteName() == 'register') text-custom @endif" href="{{route('register')}}">Registrati</a>
+          </li>
+        @endguest
       </ul>
     </div>
   </div>

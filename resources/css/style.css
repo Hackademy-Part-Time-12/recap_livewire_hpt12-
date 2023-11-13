@@ -9,3 +9,13 @@
 .text-custom{
     color: rgb(230, 230, 65);
 }
+
+.btn-custom{
+    background-color: black;
+    color: rgb(230, 230, 65);
+}
+
+.btn-custom:hover{
+    background-color:rgb(230, 230, 65);
+    color: black;
+}
