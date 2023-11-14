@@ -17,6 +17,11 @@
                 </h4>
                 <p>Inserita da: {{$recipe->user->name}}</p>
                 <p>Inserita: {{$recipe->created_at->translatedFormat('D, d/M/y')}}</p>
+                @if ($recipe->tags)
+                    @foreach ($recipe->tags as $tag)
+                        <span>{{$tag->name}}</span>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>

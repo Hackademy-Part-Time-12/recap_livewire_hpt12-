@@ -21,6 +21,13 @@
         </select>
     </div>
     <div class="mb-3">
+        <label for="" class="form-label">Tag</label><br>
+        @foreach ($tags as $tag)
+            <input type="checkbox" wire:model="name_tag" id="{{$tag->id}}" value="{{$tag->id}}">
+            <label for="{{$tag->id}}">{{$tag->name}}</label><br>
+        @endforeach
+    </div>
+    <div class="mb-3">
         <label for="image" class="form-label">Immagine</label>
         <input type="file" class="form-control" id="image" wire:model="image">
         @error('image')
