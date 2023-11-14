@@ -1,4 +1,13 @@
 <x-layout>
+    <div class="container ">
+        <div class="row bg-dark py-3">
+            @foreach ($categories as $category)
+                <div class="col-12 col-md-2 d-flex justify-content-around">
+                    <a class="text-custom" href="{{route('recipe.indexCategory', $category)}}">{{$category->name}}</a>
+                </div>
+            @endforeach
+        </div>
+    </div>
     <div class="container my-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-between">

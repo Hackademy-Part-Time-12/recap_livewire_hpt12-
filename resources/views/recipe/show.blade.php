@@ -10,6 +10,11 @@
                 <img src="{{Storage::url($recipe->image)}}" alt="{{ $recipe->title }}" class="img-show img-fluid">
             </div>
             <div class="col-12 col-md-6 p-0">
+                <h4 class="text-center">
+                    @if ($recipe->category)
+                        <a class="text-dark" href="{{ route('recipe.indexCategory', $recipe->category) }}">{{$recipe->category->name}}</a>
+                    @endif
+                </h4>
                 <p>Inserita da: {{$recipe->user->name}}</p>
                 <p>Inserita: {{$recipe->created_at->translatedFormat('D, d/M/y')}}</p>
             </div>

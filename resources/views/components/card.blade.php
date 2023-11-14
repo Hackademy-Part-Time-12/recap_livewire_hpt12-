@@ -2,6 +2,7 @@
     <img src="{{ Storage::url($recipe->image) }}" class="card-img-top" alt="{{ $recipe->title }}">
     <div class="card-body">
         <h5 class="card-title">{{ $recipe->title }}</h5>
+        <small>{{$recipe->category->name ?? 'Categoria non specificata'}}</small>
         <a href="{{route('recipe.show', $recipe)}}" class="btn btn-custom">Leggi</a>
     </div>
     <div class="card-footer">

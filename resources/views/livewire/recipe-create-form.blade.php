@@ -13,6 +13,14 @@
         @enderror
     </div>
     <div class="mb-3">
+        <label for="" class="form-label">Categoria</label>
+        <select id="" class="form-select" wire:model="category_id">
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{$category->name}}</option>
+            @endforeach
+        </select>
+    </div>
+    <div class="mb-3">
         <label for="image" class="form-label">Immagine</label>
         <input type="file" class="form-control" id="image" wire:model="image">
         @error('image')
