@@ -21,7 +21,7 @@
               Ciao {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profilo</a></li>
+              <li><a class="dropdown-item" href="{{route('profile')}}">Profilo</a></li>
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
                 <form action="{{route('logout')}}" method="POST" id="form-logout">
                   @csrf

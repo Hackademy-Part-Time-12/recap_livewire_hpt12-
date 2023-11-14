@@ -10,7 +10,7 @@ class RecipeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index', 'show');
+        $this->middleware('auth')->except('index', 'show', 'indexCategory');
     }
     /**
      * Display a listing of the resource.
@@ -42,7 +42,7 @@ class RecipeController extends Controller
      */
     public function edit(Recipe $recipe)
     {
-        //
+        return view('recipe.edit', compact('recipe'));
     }
 
     /**
