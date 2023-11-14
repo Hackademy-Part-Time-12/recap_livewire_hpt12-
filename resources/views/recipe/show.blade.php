@@ -7,7 +7,7 @@
     <div class="container my-5 shadow">
         <div class="row">
             <div class="col-12 col-md-6 p-0">
-                <img src="{{Storage::url($recipe->image)}}" alt="{{ $recipe->title }}" class="img-fluid">
+                <img src="{{Storage::url($recipe->image)}}" alt="{{ $recipe->title }}" class="img-show img-fluid">
             </div>
             <div class="col-12 col-md-6 p-0">
                 <p>Inserita da: {{$recipe->user->name}}</p>

@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
     <img src="{{ Storage::url($recipe->image) }}" class="card-img-top" alt="{{ $recipe->title }}">
     <div class="card-body">
         <h5 class="card-title">{{ $recipe->title }}</h5>

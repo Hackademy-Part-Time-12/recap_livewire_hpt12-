@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="row">
+        <div class="row justify-content-evenly">
             @forelse ($recipes as $recipe)
                 <div class="col-12 col-md-3 my-3">
                     <x-card :recipe="$recipe" />

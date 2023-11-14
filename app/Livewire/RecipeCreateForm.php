@@ -17,9 +17,9 @@ class RecipeCreateForm extends Component
     public $procedure;
 
     protected $rules = [
-        'title' => 'required|min:3|max:30',
+        'title' => 'required|min:3|max:100',
         'image' => 'required|image|mimes:webp,png,jpeg,jpg', 
-        'procedure' => 'required|min:10|max:1000',
+        'procedure' => 'required|min:10|max:10000',
     ];
 
     protected $messages = [
