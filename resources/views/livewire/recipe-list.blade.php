@@ -1,4 +1,9 @@
 <div>
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
     <table class="table table-dark table-striped">
         <thead>
             <tr>
@@ -19,7 +24,7 @@
                     <td>
                         <a href="{{route('recipe.show', $recipe)}}" class="btn btn-primary">Mostra</a>
                         <a href="{{route('recipe.edit', $recipe)}}" class="btn btn-warning">Modifica</a>
-                        <a href="" class="btn btn-danger">Elimina</a>
+                        <a wire:click="destroy({{$recipe}})" class="btn btn-danger">Elimina</a>
                     </td>
                 </tr>
                 <tr>
